@@ -877,7 +877,7 @@ export async function handler(chatUpdate) {
                 global.db.data.chats[m.chat] = {}
             if (chat) {
                 if (!('isBanned' in chat)) chat.isBanned = false
-                if (!('welcome' in chat)) chat.welcome = true
+                if (!('welcome' in chat)) chat.welcome = false
                 if (!('detect' in chat)) chat.detect = true
                 if (!('sWelcome' in chat)) chat.sWelcome = ''
                 if (!('sBye' in chat)) chat.sBye = ''
@@ -889,32 +889,32 @@ export async function handler(chatUpdate) {
                 if (!('audios' in chat)) chat.audios = false                            
                 if (!('antiLink' in chat)) chat.antiLink = false
                 if (!('antiLink2' in chat)) chat.antiLink2 = false
-                if (!('antiviewonce' in chat)) chat.antiviewonce = false
+                if (!('antiviewonce' in chat)) chat.antiviewonce = true
                 if (!('antiToxic' in chat)) chat.antiToxic = false
-                if (!('antiTraba' in chat)) chat.antiTraba = false
+                if (!('antiTraba' in chat)) chat.antiTraba = true
                 if (!('antiArab' in chat)) chat.antiArab = false
-		if (!('modoadmin' in chat)) chat.modoadmin = false
+		if (!('modoadmin' in chat)) chat.modoadmin = true
                 if (!isNumber(chat.expired)) chat.expired = 0
             } else
                 global.db.data.chats[m.chat] = {
                     isBanned: false,
-                    welcome: true,
+                    welcome: false,
                     detect: true,
                     sWelcome: '',
                     sBye: '',
                     sPromote: '',
                     sDemote: '',
                     delete: true,
-                    modohorny: true,
+                    modohorny: false,
                     autosticker: false,
                     audios: true,
                     antiLink: false,
                     antiLink2: false,
-                    antiviewonce: false,
+                    antiviewonce: true,
                     antiToxic: false,
-                    antiTraba: false,
+                    antiTraba: true,
                     antiArab: false,
-	            modoadmin: false,
+	            modoadmin: true,
                     expired: 0,
                 }
             let settings = global.db.data.settings[this.user.jid]
