@@ -494,11 +494,11 @@ var vid = vi[Math.floor(Math.random() * (vi.length))]
 
 //templateButtons
 let templateButtons = [ 
-{index: 1, urlButton: {displayText: 'GITHUB', url: 'https://github.com/BrunoSobrino/TheMystic-Bot-MD'}},
-{index: 2, urlButton: {displayText: 'PAYPAL', url: 'https://www.paypal.com/paypalme/TheShadowBrokers133'}},
-{index: 3, quickReplyButton: {displayText: 'OWNER', id: '#owner'}},
-{index: 4, quickReplyButton: {displayText: 'INFOBOT', id: '#infobot'}},
-{index: 5, quickReplyButton: {displayText: 'DONAR', id: '#donar'}}
+//{index: 1, urlButton: {displayText: 'GITHUB', url: 'https://www.youtube.com/channel/UCYnbq8Km2ZDXc2bH_SOucGw'}},
+//{index: 2, urlButton: {displayText: 'PAYPAL', url: 'https://www.youtube.com/channel/UCYnbq8Km2ZDXc2bH_SOucGw'}},
+//{index: 3, quickReplyButton: {displayText: 'OWNER', id: '#owner'}},
+//{index: 4, quickReplyButton: {displayText: 'INFOBOT', id: '#infobot'}},
+//{index: 5, quickReplyButton: {displayText: 'DONAR', id: '#donar'}}
 ]
 
 conn.sendMessage(m.chat, { video: { url: vid }, gifPlayback: true, gifAttribution: ~~(Math.random() * 2), caption: str.trim(), footer: wm, templateButtons }, { quoted: m})
